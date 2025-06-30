@@ -1,0 +1,187 @@
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        .nav-link.active {
+            color: #0d6efd !important;
+        }
+
+        .search-bar {
+            background-color: #111;
+            border: 1px solid #663399;
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: white;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .hero-section,
+        .feature-section,
+        .top-rated-section {
+            padding: 60px 0;
+        }
+
+        .hero-logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            color: #663399;
+        }
+
+        .bg-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .small-heading {
+            font-size: 1.1rem;
+            /* Bootstrap's text-primary should give a blue color */
+        }
+
+        .main-heading {
+            font-size: 2.5rem;
+            /* Adjust as needed */
+            line-height: 1.3;
+        }
+
+        .movie-card {
+            border-radius: 15px;
+            /* Rounded corners for the cards */
+            overflow: hidden;
+            /* Ensures image corners are also rounded */
+            background-color: #222;
+            /* Fallback if image doesn't load */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.03);
+            /* Slight zoom on hover */
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Styles for the interactive card (Card 2) */
+        .interactive-card .play-icon-overlay {
+            position: absolute;
+            top: 40%;
+            /* Adjust to position play button nicely over the image content */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(20, 123, 255, 0.9);
+            /* Blue, slightly transparent */
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 10;
+        }
+
+        .interactive-card:hover .play-icon-overlay {
+            background-color: rgba(13, 99, 204, 1);
+            /* Darker blue on hover */
+        }
+
+        .interactive-card .info-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            /* Semi-transparent black */
+            color: white;
+            border-bottom-left-radius: 15px;
+            /* Match card rounding */
+            border-bottom-right-radius: 15px;
+            /* Match card rounding */
+            z-index: 5;
+        }
+
+        .info-overlay .wishlist-text {
+            font-size: 0.8rem;
+            color: #e0e0e0;
+        }
+
+        .info-overlay .movie-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-overlay .movie-meta {
+            font-size: 0.75rem;
+            color: #b0b0b0;
+        }
+
+        .info-overlay .movie-meta small {
+            opacity: 0.9;
+        }
+
+        .get-it-now-btn {
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            /* Slightly rounded button */
+        }
+
+        /* Responsive adjustments for headings */
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2rem;
+            }
+
+            .interactive-card .play-icon-overlay {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .main-heading {
+                font-size: 1.6rem;
+            }
+
+            .small-heading {
+                font-size: 1rem;
+            }
+
+            .interactive-card .play-icon-overlay {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .info-overlay .movie-title {
+                font-size: 1rem;
+            }
+
+            .get-it-now-btn {
+                font-size: 1rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
